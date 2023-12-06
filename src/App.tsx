@@ -1,6 +1,15 @@
+import './App.css'
+import { Layout } from "./components"
+import { AlertProvider } from "./context/AlertContext"
+import { Router } from "./router"
+
 function App() {
   return (
-    <>Hello world</>
+    <AlertProvider>
+      <Layout>
+        <Router />
+      </Layout>
+    </AlertProvider>
   )
 }
 
