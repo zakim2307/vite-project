@@ -7,8 +7,8 @@ export type Project = {
   
   export const projects: Project[] = [
     {
-      slug: 'react-space',
-      title: 'React Space',
+      slug: 'react-portfolio',
+      title: 'React Personal Portfolio',
       description:
         'Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️',
       image:

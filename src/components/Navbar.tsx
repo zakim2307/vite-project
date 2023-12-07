@@ -11,6 +11,8 @@ import cn from 'clsx'
 function Navbar() {
   const [yOffset, setYOffset] = useState(window.pageYOffset)
   const [visible, setVisible] = useState(true)
+  const linkedIn = "https://www.linkedin.com/in/zaki-mohd"
+  const instagram = "https://www.instagram.com/_iamzaki__dev/"
 
   const handleClickScroll = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -42,21 +44,21 @@ function Navbar() {
       <ul className="flex gap-12 justify-center items-center p-4 backdrop-blur-lg border-b bg-white bg-opacity-60 border-gray-200 md-gap-16">
         <a
           className="flex gap-4 justify-center items-center"
-          href="https://github.com/AchrafGarai"
+          href="https://github.com/zakim2307"
         >
           <GitHubLogoIcon width={20} height={20} />
           <li className="hidden md:block">Github</li>
         </a>
         <a
           className="flex gap-4 justify-center items-center"
-          href="https://www.linkedin.com/in/achraf-garai/"
+          href={linkedIn}
         >
           <LinkedInLogoIcon width={20} height={20} />
           <li className="hidden md:block">LinkedIn</li>
         </a>
         <a
           className="flex gap-4 justify-center items-center"
-          href="https://www.instagram.com/achraf_garai/"
+          href={instagram}
         >
           <InstagramLogoIcon width={20} height={20} />
           <li className="hidden md:block">Instagram</li>

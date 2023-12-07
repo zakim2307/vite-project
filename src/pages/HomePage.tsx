@@ -8,7 +8,7 @@ function HomePage() {
     return (
         <Container>
             <Helmet>
-                <title>Welcome to my blog 🔥</title>
+                <title>Welcome to my Personal Website</title>
             </Helmet>
             <LandingSection />
             <ProjectsSection />

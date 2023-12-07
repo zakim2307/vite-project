@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { useAlertContext } from '../context/AlertContext';
 import { AlertType } from '../context/AlertContext';
+import { sendCustomEmail } from '../email/email'
 
 const SignUpSchema = Yup.object().shape({
     name: Yup.string().min(2, 'Name is Too Short').max(50, 'Too long').required('This field is required'),
@@ -22,8 +23,9 @@ function ContactForm() {
         }}
             validationSchema={SignUpSchema}
             onSubmit={(values) => {
+                sendCustomEmail(values);
                 console.log(onOpen, '--------', isOpen);
-                onOpen('All good!', `Thanks for your submission ${values.name}, we will get back to you shortly!`)
+                onOpen('All good!', `Thanks for your submission ${values.name}, we will get back to you shortly!`);
             }}
         >
             <Form className='flex flex-col gap-6'>
